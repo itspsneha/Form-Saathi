@@ -4,7 +4,7 @@
 
 // Get API key from environment variables
 // Use NEXT_PUBLIC_ prefix to expose the variable to the client-side code
-const SARVAM_API_KEY = process.env.NEXT_PUBLIC_SARVAM_API_KEY || '19a6175f-768a-4b31-83db-37a333d15d22';
+const SARVAM_API_KEY = process.env.NEXT_PUBLIC_SARVAM_API_KEY || '';
 
 // Base URL for Sarvam API
 const BASE_URL = 'https://api.sarvam.ai';
