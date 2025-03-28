@@ -177,7 +177,7 @@ function tryFallbackPlayback(audioData: Uint8Array): Promise<void> {
       const audioContext = new (window.AudioContext || (window as any).webkitAudioContext)();
       
       audioContext.decodeAudioData(
-        audioData.buffer,
+        (new Uint8Array(audioData.buffer).buffer as ArrayBuffer),
         (buffer) => {
           console.log('Successfully decoded audio data');
           const source = audioContext.createBufferSource();
